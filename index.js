@@ -2,10 +2,12 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 
 async function acompanharPreco() {
+  //coloque aqui o link do ecommerce
   try {
     const url =
       "https://www.mercadolivre.com.br/estocasa-cadeira-ergonometra-escritorio-estofado-confortavel-premium-cor-preto-material-do-estofamento-tecido/p/MLB28467432#polycard_client=search-nordic&searchVariation=MLB28467432&wid=MLB3678290879&position=4&search_layout=grid&type=product&tracking_id=26065c4c-e7d0-4f4b-b642-95ee98a294fa&sid=search";
 
+    // Aqui vai vc coloca o seletor css do preço
     const seletorPreco = ".andes-money-amount__fraction";
 
     const { data } = await axios.get(url);
